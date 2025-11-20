@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Arena – MOBA moderno</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Menú principal de selección de personajes -->
+    <div id="menu" class="panel">
+      <h1>Battle Arena</h1>
+      <p>Elige tu héroe y tu aspecto preferido para entrar en la batalla.</p>
+      <div id="character-selection" class="character-grid"></div>
+      <button id="start-button" class="primary-button" disabled>Comenzar batalla</button>
+    </div>
+
+    <!-- Contenedor para el juego -->
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+
+    <!-- HUD (muestra vida, oro, botón de tienda) -->
+    <div id="hud">
+      <div id="health-bar" class="bar"><div class="fill"></div></div>
+      <div id="stats">
+        <span id="gold">💰 0</span>
+        <span id="kills">Eliminaciones: 0</span>
+      </div>
+      <button id="shop-button" class="secondary-button">Tienda</button>
+    </div>
+
+    <!-- Panel de tienda de objetos -->
+    <div id="shop-panel" class="overlay hidden">
+      <div class="shop-content">
+        <h2>Tienda de objetos</h2>
+        <div id="shop-items" class="shop-grid"></div>
+        <button id="close-shop" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Controles en pantalla para dispositivos móviles -->
+    <div id="mobile-controls" class="mobile-controls hidden">
+      <div class="dpad">
+        <button id="up-btn">▲</button>
+        <button id="left-btn">◀</button>
+        <button id="down-btn">▼</button>
+        <button id="right-btn">▶</button>
+      </div>
+      <div class="actions">
+        <button id="attack-btn">Atacar</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
